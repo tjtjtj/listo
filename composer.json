@@ -1,0 +1,26 @@
+{
+    "name": "tjtjtj/listo",
+    "description": "Amazon S3 RESTful API compatible object storage server.",
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=5.3.3",
+        "silex/silex": "~1.0",
+        "symfony/monolog-bridge": "~2.3",
+
+        "symfony/http-kernel": "^2.8",
+        "openlss/lib-array2xml": "^0.0.10",
+        "league/flysystem": "^1.0",
+        "nesbot/carbon": "^1.21"
+    },
+    "autoload": {
+        "psr-4": {
+            "Listo\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.1.x-dev"
+        }
+    }
+}

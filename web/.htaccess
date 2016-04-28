@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+    Options -MultiViews
+
+    SetEnv V2_ACCESSKEY asdf
+    SetEnv V2_SECRETACCESSKEY asdf
+
+    RewriteEngine On
+    #RewriteBase /path/to/app
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [QSA,L]
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
+</IfModule>
