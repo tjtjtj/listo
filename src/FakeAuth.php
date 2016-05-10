@@ -3,11 +3,11 @@
 namespace Listo;
 
 /**
- * V2Auth.
+ * FakeAuth.
  *
  * @author Jun Takeuchi <jakeun.mob@gmail.com>
  */
-class V2Auth
+class FakeAuth
 {
     protected $accessKey;
     protected $secretAccessKey;

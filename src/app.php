@@ -26,8 +26,8 @@ $app['logger'] = $app->share(function ($app) {
 });
 // auth
 $app['authorize'] = $app->share(function ($app) {
-    $config = $app['listo.config']['v2auth'];
-    $auth = new Listo\V2Auth($config);
+    $config = $app['listo.config']['fakeauth'];
+    $auth = new Listo\FakeAuth($config);
     $auth->logger = $app['logger'];
     return $auth;
 });

@@ -22,7 +22,7 @@ $app['listo.config'] = [
     'fs' => [
         'buckets_path' => __DIR__ . '/../buckets/',
     ],
-    'v2auth' => [
+    'fakeauth' => [
         'acceskey'        => getenv('V2_ACCESSKEY'),
         'secretaccesskey' => getenv('V2_SECRETACCESSKEY'),
     ],
