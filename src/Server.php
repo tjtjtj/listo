@@ -74,14 +74,14 @@ class Server
                     $path,
                     $con['timestamp'],
                     $con['size'],
-                    'etag'
+                    $this->fs->getMd5($bucket->name.'/'.$path)
                 );
             } else {
                 $ret[] = new Content(
                     $path.'/',
                     $con['timestamp'],
                     0,
-                    'etag'
+                    $this->fs->getMd5($bucket->name.'/'.$path)
                 );
             }
         }

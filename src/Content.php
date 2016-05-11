@@ -29,8 +29,7 @@ class Content
             'Key' => $this->name,
             'LastModified' => $this->updatedAt->toIso8601String(),
             'Size' => $this->size,
-            'ETag' => "\"3a7e05728edf101c044bceff755090e7\"",
-            //'ETag' => $this->etag,
+            'ETag' => $this->etag,
             'StorageClass' => 'STANDARD',
             'Owner' => [
               'ID' => 8050,

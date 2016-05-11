@@ -36,6 +36,7 @@ $app['fs'] = $app->share(function ($app) {
     $settings = $app['listo.config']['buckets'];
     $adapter = new League\Flysystem\Adapter\Local($settings['path']);
     $fs = new League\Flysystem\Filesystem($adapter);
+    $fs->addPlugin(new Listo\flysystem\LocalMd5Plugin);
     return $fs;
 });
 // server
