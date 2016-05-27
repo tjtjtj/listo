@@ -20,10 +20,15 @@ class XmlAdapter
                 'ID' => 8050,
                 'DisplayName' => 'buckettest00002'
             ],
-            'Buckets' => [
-                'Bucket' => array_map($func, $buckets),
-            ],
         ];
+        if (count($buckets) > 0) {
+            $func = function($b) {
+                return $b->toArray();
+            };
+            $arr['Buckets'] = [
+                'Bucket' => array_map($func, $buckets),
+            ];
+        }
         $xml = Array2XML::createXML('ListAllMyBucketsResult', $arr);
         $xml->formatOutput = false;
         return $xml->saveXML();
